@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+            //Closure
+Route::get('/about', function () {
+    return "About Me";
+});
+            //?=optional
+Route::get('/pages/{id?}', function ($id=1) {
+    return "Page {$id}";
+});
